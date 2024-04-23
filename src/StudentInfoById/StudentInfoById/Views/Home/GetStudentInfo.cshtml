@@ -1,0 +1,15 @@
+﻿@model StudentInfoById.Models.StudentInfoModel
+
+<h1>User Details</h1>
+<table>
+    <tbody>
+        @foreach (var property in typeof(StudentInfoById.Models.StudentInfoModel).GetProperties())
+        {
+            <tr>
+                <td>@property.Name</td>
+                <td>@property.GetValue(Model)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
